@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loja Geekcommerce</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300|Raleway:300,400,900,700italic,700,300,600">
+  <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+  <!-- ==================================================
+    Projeto: Loja Virtual Geekcommerce
+  ======================================================= -->
+<!-- PopUp CSS login_cliente -->
+  <div class="modal fade" id="login_cliente" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Login GeekCommerce</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <input id="txtEmail" type="text" class="form-control" name="nome_cliente" placeholder="Seu email">
+            </div>
+            <div class="form-group">
+              <input id="txtPass" type="password" class="form-control" name="senha_cliente" placeholder="Insira sua senha">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+          <button id="btnEntrar" type="submit" class="btn btn-primary">Entrar</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<!-- Fim login_cliente -->
+</head>
+
+<body>
+
+  <div class="loader"></div>
+  <div id="myDiv">
+    <!--CABEÇALHO-->
+    <div style="margin-top:150px;">
+      <div class="">
+        <header id="main-header">
+          <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #000000cc;">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><!-- Tela Responsiva -->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+                <a class="navbar-brand" href="index.html">Geek<span class="logo-dec">commerce</span></a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="#main-header">Início</a></li>
+                  <li class=""><a href="index.html">Categorias</a></li>
+                  <li class=""><a href="index.html">Produtos</a></li>              
+                  <li class=""><a href="index.html">Cadastrar</a></li>
+                  <li>
+                      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#login_cliente"><i class="fa fa-user-circle-o"></i> Login</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+  <body>
+
+    <!-- Conteúdo -->
+    <div class="container">
+
+      <div class="row">
+
+        <!-- Post Content -->
+        <div class="col-lg-8">
+
+          <!-- Título -->
+          <h1 class="mt-4">Nintendo DS</h1>
+
+          <hr>
+
+          <!-- Imagem -->
+          <img class="img-fluid rounded" src="img/nintendo_ds.jpg" width="600px" height="auto" alt="">
+
+          <hr>
+
+          <!-- Post -->
+          <p class="lead">
+		  O Nintendo DS é um console de videogame portátil desenvolvido e produzido pela Nintendo, lançado em 2004. Ele é visualmente distinto por seu design abre e fecha, e a presença<br> 
+		  de duas telas, sendo a inferior sensível ao toque. O sistema também possui um microfone embutido, e tem suporte a conexão sem-fio via Wireless Local, permitindo uma interação<br>  
+		  entre os jogadores dentro de uma pequena área (9-30 metros, dependendo das condições), ou pelo Nintendo Wi-Fi Connection, que permite multiplayer online com jogadores de todo <br> 
+		  o mundo.		  
+		  </p>
+		  
+          <blockquote class="blockquote">
+            <p class="mb-0">A linha Nintendo DS é uma linha de Video games portáteis desenvolvido pela Nintendo, teve início em 2004.</p>
+            <footer class="blockquote-footer">Existem várias sequências:
+              <cite id ="nomeProduto" title="Source Title">Nintendo DS Lite (2006)</cite>
+            </footer>
+          </blockquote>
+
+          <p>Super Mario 64 DS, Mario Kart DS, New Super Mario Bros. e Meteos</p>
+
+          <hr>
+
+   
+
+        </div>
+
+        <!-- Sidebar Lateral -->
+        <div class="col-md-4">
+
+          <!--  Preço -->
+          <div align="center" style="margin: 35px 0 0 0; padding: 7px 0 39px 0; border: 1px solid;  ">
+            <h5 class="card-header">PREÇO</h5>
+            <div class="card-body">
+              <h1 id="precoProduto">R$64,90</h1>
+			  <button id="addCarrinho" class="btn-default" name="comprar">Adicionar no carrinho</button>
+            </div>
+          </div>
+
+          <!-- Categorias -->
+          <div style="margin-top:20px;" class="card my-4">
+            <h4 class="card-header">CATEGORIAS</h4>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul class="list-unstyled mb-0">
+                    <li>
+					<a href="#">Brinquedos</a>
+                    </li>
+                    <li>
+                      <a href="#">Colecionáveis</a>
+                    </li>
+                    <li>
+                      <a href="#">Eletrônicos</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!--RODAPÉ-->
+    <footer id="footer">
+      <div class="container">
+        <div class="row text-center">
+          <p>&copy; Direitos reservados loja Geekcommerce.</p>
+          <div class="credits">
+            Design feito por <a href="#">Geekcommerce</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!---->
+  </div>
+        <script src="js/scripts.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/jquery.bxslider.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="contactform/contactform.js"></script>
+  <script type="text/javascript">
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+  </script>
+  <script type="text/javascript">
+      $('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget)
+  var recipient = button.data('whatever')
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)
+})
+  </script>
+
+</body>
+</html>

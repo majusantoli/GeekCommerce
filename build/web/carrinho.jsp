@@ -1,0 +1,240 @@
+<%@page import="java.util.LinkedList"%>
+<%@page import="java.text.DecimalFormat"%>
+<%@page import="classes.Produto"%>
+<%@page import="classes.Carrinho"%>
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loja Geekcommerce</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300|Raleway:300,400,900,700italic,700,300,600">
+  <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+  <!-- ==================================================
+    Projeto: Loja Virtual Geekcommerce
+  ======================================================= -->
+<!-- PopUp CSS login_cliente -->
+  <div class="modal fade" id="login_cliente" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Login GeekCommerce</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+               <input id="txtEmail" type="text" class="form-control" name="nome_cliente" placeholder="Seu email">
+            </div>
+            <div class="form-group">
+              <input id="txtPass" type="password" class="form-control" name="senha_cliente" placeholder="Insira sua senha">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+          <button id="btnEntrar" type="submit" class="btn btn-primary">Entrar</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<!-- Fim login_cliente -->
+</head>
+
+<body>
+
+  <div class="loader"></div>
+  <div id="myDiv">
+    <!--CABEÇALHO-->
+    <div style="margin-top:150px;">
+      <div class="">
+        <header id="main-header">
+          <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #000000cc;">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><!-- Tela Responsiva -->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+                <a class="navbar-brand" href="index.html">Geek<span class="logo-dec">commerce</span></a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="#main-header">Início</a></li>
+                  <li class=""><a href="index.html">Categorias</a></li>
+                  <li class=""><a href="index.html">Produtos</a></li>              
+                  <li class=""><a href="index.html">Cadastrar</a></li>
+                  <li>
+                      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#login_cliente"><i class="fa fa-user-circle-o"></i> Login</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+  <body>
+      
+    
+
+  <div class="loader"></div>
+  <div id="myDiv">
+    <!--CABEÇALHO-->
+    <div>
+      <div>
+        <header id="main-header">
+          <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#6666;">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><!--Tela Responsiva-->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+                <a class="navbar-brand" href="#">Geek<span class="logo-dec">commerce</span></a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="#main-header"><i class="fa fa-home"></i> Início</a></li>
+                  <li class=""><a href="#categorias">Categorias</a></li>
+                  <li class=""><a href="#produtos">Produtos</a></li>              
+                  <li class=""><a href="#cadastro">Cadastrar</a></li>
+                  <li class="">
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#login_cliente"><i class="fa fa-user-circle-o"></i> Login</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+
+<div style="margin-top: 150px;" class="container">
+   <div class="card shopping-cart">
+            <div class="card-header bg-dark text-light">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                Carrinho
+                <a href="" class="btn btn-outline-info btn-sm pull-right">Deseja continuar a comprar?</a>
+                <div class="clearfix"></div>
+            </div>
+            <div  class="card-body">
+                    <!-- PRODUCT -->
+                    <ul id="listaCarr">
+                    <%
+            Carrinho car = (Carrinho) session.getAttribute("carrinho");
+          out.print("<h1>Itens do carrinho</h1>");
+            
+            if(car == null)
+            {
+                out.print("<h1>Carrinho Vazio!</h1>");
+            }
+            
+            else
+            {
+                LinkedList<Produto> lista = car.getLista(); 
+                 DecimalFormat df = new DecimalFormat("#.##");
+                 
+                out.print("<table class='table table-bordered>'");
+                out.print("<tr><th>Descrição</th>        <th>Preço</th></tr>");
+                out.print("<tbody>");
+                for(Produto ob: lista)
+                {
+                    
+                        
+                    out.print("<tr><td>"+ob.getNome()+"</td>");
+                    out.print("<td>"+"R$"+df.format(ob.getPreco())+"</td>");
+                    out.print("<br>");
+                }
+                out.print("<h1> Total: R$" +df.format(car.getTotal())+"</h1>");
+                out.print("<a class='btn btn-success' id='btnFin'>Finalizar Compra</a>");
+               
+                out.print("</tbody>");
+                out.print("</table>");
+                
+            }
+            
+            
+         %>        
+                        </ul>
+                
+                    
+                    
+                    <!-- END PRODUCT -->
+                  
+                <div class="pull-right">
+                    <a href="" class="btn btn-outline-secondary pull-right">
+                        Atualizar Carrinho
+                    </a>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="coupon col-md-5 col-sm-5 no-padding-left pull-left">
+                    <div class="row">
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="Código do Cupom">
+                        </div>
+                        <div class="col-6">
+                            <input type="submit" class="btn btn-default" value="Cupons">
+                        </div>
+                    </div>
+                </div>
+               
+                </div>
+            </div>
+        </div>
+</div>
+
+    <!--RODAPÉ-->
+    <footer id="footer">
+      <div class="container">
+        <div class="row text-center">
+          <p>&copy; Direitos reservados loja Geekcommerce.</p>
+          <div class="credits">
+            Design feito por <a href="#">Geeks</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!---->
+  </div>
+       <script src="js/scripts.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/jquery.bxslider.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="contactform/contactform.js"></script>
+  <script type="text/javascript">
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+  </script>
+
+</body>
+</html>

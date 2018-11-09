@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loja Geekcommerce</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300|Raleway:300,400,900,700italic,700,300,600">
+  <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+  <!-- ==================================================
+    Projeto: Loja Virtual Geekcommerce
+  ======================================================= -->
+<!-- PopUp CSS login_cliente -->
+  <div class="modal fade" id="login_cliente" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Login GeekCommerce</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <input id="txtEmail" type="text" class="form-control" name="nome_cliente" placeholder="Seu email">
+            </div>
+            <div class="form-group">
+              <input id="txtPass" type="password" class="form-control" name="senha_cliente" placeholder="Insira sua senha">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+          <button id="btnEntrar" type="submit" class="btn btn-primary">Entrar</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<!-- Fim login_cliente -->
+</head>
+
+<body>
+
+  <div class="loader"></div>
+  <div id="myDiv">
+    <!--CABEÇALHO-->
+    <div style="margin-top:150px;">
+      <div class="">
+        <header id="main-header">
+          <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #000000cc;">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><!-- Tela Responsiva -->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+                <a class="navbar-brand" href="index.html">Geek<span class="logo-dec">commerce</span></a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="#main-header">Início</a></li>
+                  <li class=""><a href="index.html">Categorias</a></li>
+                  <li class=""><a href="index.html">Produtos</a></li>              
+                  <li class=""><a href="index.html">Cadastrar</a></li>
+                  <li>
+                      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#login_cliente"><i class="fa fa-user-circle-o"></i> Login</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+  <body>
+		
+    <div class="container" align="center" style="margin-top:150px;">
+        <div class="page-header">
+            <p class="lead text-center">
+                  <i class="glyphicon glyphicon-cog"></i> Minha Conta
+            </p>
+        </div>
+        <form class="col-md-6 col-md-offset-3 role="form">
+            <div class="form-group">
+                <label>Nome Completo</label>
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="glyphicon glyphicon-user"></i>
+                    </div>
+                    <input type="text" class="form-control" id="nome_cliente" placeholder="Nome Completo" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>E-mail</label>
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="glyphicon glyphicon-envelope"></i>
+                    </div>
+                    <input type="email_cliente" class="form-control" id="email_cliente" placeholder="Endereço de e-mail" required>
+                </div>                
+            </div>
+            <div class="form-group">
+                <label>Senha</label>
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="glyphicon glyphicon-lock"></i>
+                    </div>
+                    <input type="password" class="form-control" id="senha_cliente" placeholder="******" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Confirme a senha:</label>
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="glyphicon glyphicon-lock"></i>
+                    </div>
+                    <input type="password" class="form-control" id="" placeholder="******" name="" required>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <input id="btnSalvar" type="button" class="form-control btn btn-warning" value="Salvar">
+            </div>
+            <div class="form-group">
+                <input type="reset" class="form-control btn btn-danger" value="Limpar tudo">
+            </div>
+        </form>
+    </div>
+    <!-- Container -->
+
+
+    <!--RODAPÉ-->
+    <footer id="footer">
+      <div class="container">
+        <div class="row text-center">
+          <p>&copy; Direitos reservados loja Geekcommerce.</p>
+          <div class="credits">
+            Design feito por <a href="#">Geekcommerce</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!---->
+  </div>
+        <script src="js/scripts.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/jquery.bxslider.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="contactform/contactform.js"></script>
+  <script type="text/javascript">
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+  </script>
+  <script type="text/javascript">
+      $('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget)
+  var recipient = button.data('whatever')
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)
+})
+  </script>
+
+</body>
+</html>

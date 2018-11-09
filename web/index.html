@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loja Geekcommerce</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300|Raleway:300,400,900,700italic,700,300,600">
+  <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+  <!-- ==================================================
+    Projeto: Loja Virtual Geekcommerce
+  ======================================================= -->
+<!-- PopUp CSS login_cliente -->
+  <div class="modal fade" id="login_cliente" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Login GeekCommerce</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <input id="txtEmail" type="text" class="form-control" name="nome_cliente" placeholder="Seu email">
+            </div>
+            <div class="form-group">
+              <input id="txtPass" type="password" class="form-control" name="senha_cliente" placeholder="Insira sua senha">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+          <button id="btnEntrar" type="submit" class="btn btn-primary">Entrar</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+<!-- Fim login_cliente -->
+</head>
+
+<body>
+
+  <div class="loader"></div>
+  <div id="myDiv">
+    <!--CABE�ALHO-->
+    <div class="header">
+      <div class="bg-color">
+        <header id="main-header">
+          <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><!--Tela Responsiva-->
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+                <a class="navbar-brand" href="#">Geek<span class="logo-dec">commerce</span></a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="#main-header"><i class="fa fa-home"></i>Inicio</a></li>
+                  <li class=""><a href="#categorias">Categorias</a></li>
+                  <li class=""><a href="#produtos">Produtos</a></li>              
+                  <li class=""><a href="#cadastro">Cadastrar</a></li>
+                  <li>
+                      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#login_cliente"><i class="fa fa-user-circle-o"></i> LOGIN </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <div class="wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="banner-info text-center wow fadeIn delay-05s"><!--carregamento script owl-->
+                <h1 class="bnr-title">Sua loja geek online</h1>
+                <h2 class="bnr-sub-title">geekcommerce</h2>
+                <p class="bnr-para">Conheça todos os nossos produtos e compre com descontos!</p>
+                <div class="brn-btn">
+                  <a href="#Produtos" class="btn btn-download">Ver os produtos</a>
+                  <a href="#cadastro" class="btn btn-more">Faça o cadastro</a>
+                </div>
+                <div class="overlay-detail">
+                  <a href="#categorias"><i class="fa fa-angle-down"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---->
+    <!--CATEGORIAS-->
+    <section id="categorias" class="section-padding wow fadeIn delay-05s">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="wrap-item text-center">
+              <div class="item-img">
+                <img src="img/ser01.png">
+              </div>
+              <h3 class="pad-bt15">Outros</h3>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="wrap-item text-center">
+              <div class="item-img">
+                <img src="img/ser02.png">
+              </div>
+              <h3 class="pad-bt15">Brinquedos</h3>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="wrap-item text-center">
+              <div class="item-img">
+                <img src="img/ser03.png">
+              </div>
+              <h3 class="pad-bt15">Colecionaveis</h3>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="wrap-item text-center">
+              <div class="item-img">
+                <img src="img/ser04.png">
+              </div>
+              <h3 class="pad-bt15">Eletronicos</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!---->
+    <!--PRODUTOS-->
+    <section id="produtos" class="section-padding wow fadeInUp delay-05s">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2 class="service-title pad-bt15">Colecionaveis</h2>
+            <p class="sub-title pad-bt15"></p>
+            <hr class="bottom-line">
+          </div>
+        </div>
+      </div>
+    <div class="container-fluid">
+      <div class="owl-carousel owl-theme"><!--INICIO CARROSSEL-->
+          <div class="portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="img/boneco-lothar-pop-funko-01_1.jpg" class="img-responsive">
+              <figcaption>
+                <div style="border: 2px solid #ccc!important;border-radius: 16px;padding: 0.01em 16px;"><h2>Comprar</h2></div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="img/boneco-lothar-pop-funko-01_1.jpg" class="img-responsive">
+              <figcaption>
+                <div style="border: 2px solid #ccc!important;border-radius: 16px;padding: 0.01em 16px;"><h2>Comprar</h2></div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="img/boneco-lothar-pop-funko-01_1.jpg" class="img-responsive">
+              <figcaption>
+                <div style="border: 2px solid #ccc!important;border-radius: 16px;padding: 0.01em 16px;"><h2>Comprar</h2></div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="img/boneco-lothar-pop-funko-01_1.jpg" class="img-responsive">
+              <figcaption>
+                <div style="border: 2px solid #ccc!important;border-radius: 16px;padding: 0.01em 16px;"><h2>Comprar</h2></div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="img/boneco-lothar-pop-funko-01_1.jpg" class="img-responsive">
+              <figcaption>
+                <div style="border: 2px solid #ccc!important;border-radius: 16px;padding: 0.01em 16px;"><h2>Comprar</h2></div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="img/boneco-lothar-pop-funko-01_1.jpg" class="img-responsive">
+              <figcaption>
+                <div style="border: 2px solid #ccc!important;border-radius: 16px;padding: 0.01em 16px;"><h2>Comprar</h2></div>
+              </figcaption>
+            </figure>
+          </div>
+      </div><!--FIM CARROSSEL-->
+    </div>
+</section>
+    <!---->
+    <!---->
+    <!--PRODUTOS 2-->
+    <section class="section-padding wow fadeInUp delay-05s">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2 class="service-title pad-bt15">Eletronicos</h2>
+            <p class="sub-title pad-bt15"></p>
+            <hr class="bottom-line">
+          </div>
+        </div>
+      </div>
+    <div class="container-fluid">
+      <div class="owl-carousel owl-theme"><!--INICIO CARROSSEL-->
+          <div class="portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="img/nintendo_ds.jpg" class="img-responsive">
+              <figcaption>
+                <div style="border: 2px solid #ccc!important;border-radius: 16px;padding: 0.01em 16px;"><h2>Comprar</h2></div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="img/nintendo_ds.jpg" class="img-responsive">
+              <figcaption>
+                <div style="border: 2px solid #ccc!important;border-radius: 16px;padding: 0.01em 16px;"><h2>Comprar</h2></div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="img/nintendo_ds.jpg" class="img-responsive">
+              <figcaption>
+                <div style="border: 2px solid #ccc!important;border-radius: 16px;padding: 0.01em 16px;"><h2>Comprar</h2></div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="img/nintendo_ds.jpg" class="img-responsive">
+              <figcaption>
+                <div style="border: 2px solid #ccc!important;border-radius: 16px;padding: 0.01em 16px;"><h2>Comprar</h2></div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="img/nintendo_ds.jpg" class="img-responsive">
+              <figcaption>
+                <div style="border: 2px solid #ccc!important;border-radius: 16px;padding: 0.01em 16px;"><h2>Comprar</h2></div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="img/nintendo_ds.jpg" class="img-responsive">
+              <figcaption>
+                <div style="border: 2px solid #ccc!important;border-radius: 16px;padding: 0.01em 16px;"><h2>Comprar</h2></div>
+              </figcaption>
+            </figure>
+          </div>
+      </div><!--FIM CARROSSEL-->
+    </div>
+</section>
+    <!---->
+    <!--PRODUTOS 3-->
+    <section class="section-padding wow fadeInUp delay-05s">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2 class="service-title pad-bt15">Brinquedos</h2>
+            <p class="sub-title pad-bt15"></p>
+            <hr class="bottom-line">
+          </div>
+        </div>
+      </div>
+    <div class="container-fluid">
+      <div class="owl-carousel owl-theme"><!--INICIO CARROSSEL-->
+          <div class="portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="img/brinquedo.jpg" class="img-responsive">
+              <figcaption>
+                <div style="border: 2px solid #ccc!important;border-radius: 16px;padding: 0.01em 16px;"><h2>Comprar</h2></div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="img/brinquedo.jpg" class="img-responsive">
+              <figcaption>
+                <div style="border: 2px solid #ccc!important;border-radius: 16px;padding: 0.01em 16px;"><h2>Comprar</h2></div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="img/brinquedo.jpg" class="img-responsive">
+              <figcaption>
+                <div style="border: 2px solid #ccc!important;border-radius: 16px;padding: 0.01em 16px;"><h2>Comprar</h2></div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="img/brinquedo.jpg" class="img-responsive">
+              <figcaption>
+                <div style="border: 2px solid #ccc!important;border-radius: 16px;padding: 0.01em 16px;"><h2>Comprar</h2></div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="img/brinquedo.jpg" class="img-responsive">
+              <figcaption>
+                <div style="border: 2px solid #ccc!important;border-radius: 16px;padding: 0.01em 16px;"><h2>Comprar</h2></div>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="portfolio-item padding-right-zero mr-btn-15">
+            <figure>
+              <img src="img/brinquedo.jpg" class="img-responsive">
+              <figcaption>
+                <div style="border: 2px solid #ccc!important;border-radius: 16px;padding: 0.01em 16px;"><h2>Comprar</h2></div>
+              </figcaption>
+            </figure>
+          </div>
+      </div><!--FIM CARROSSEL-->
+    </div>
+</section>
+<!---->
+    <!--CADASTRO-->
+    <section id="cadastro" class="section-padding wow fadeInUp delay-05s" style="background:rgba(64, 75, 97, 0.9);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center white">
+            <h2 class="service-title">Não tem Cadastro? Cadastre-se</h2>
+            <p class="sub-title">Aproveite os melhores descontos!</p>
+            <hr class="bottom-line white-bg">
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="loction-info white">
+              <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>Avenida Brigadeiro Luis Ant�nio<br>S�o Paulo, SP</p>
+              <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>contato@geekcommerce.com.br</p>
+              <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+55 11 5656-8888</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <div class="contact-form">
+              <div id="sendmessage">Seu cadastro foi conclu�do. Obrigada!</div>
+              <div id="errormessage"></div>
+              <form action="" method="post" role="form" class="contactForm">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Nome Completo" data-rule="minlen:4" data-msg="Insira no m�nio 4 caracteres, por favor." />
+                    <div class="validation"></div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input type="email" class="form-control" name="email" id="txtEmail2" placeholder="Seu E-mail" data-rule="email" data-msg="Coloque um e-mail v�lido" />
+                    <div class="validation"></div>
+                  </div>
+                </div>
+                  <div class="col-md-12">
+                  <div class="form-group">
+                    <input id="txtPass2" type="password" class="form-control" name="senha_cliente" id="senha_cliente" placeholder="Defina uma senha" data-rule="senha_cliente" data-msg="Coloque uma senha v�lida de at� 6 digitos" />
+                    <div class="validation"></div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <button id="btnCadastrar" type="button" class="btn btn-primary btn-submit">Cadastrar</button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!---->
+    <!--RODAP�-->
+    <footer id="footer">
+      <div class="container">
+        <div class="row text-center">
+          <p>&copy; Direitos reservados loja Geekcommerce.</p>
+          <div class="credits">
+            Design feito por <a href="#">GeekCommerce</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!---->
+  </div>
+  <script src="js/scripts.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/wow.js"></script>
+  <script src="js/jquery.bxslider.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="contactform/contactform.js"></script>
+  <script type="text/javascript">
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+  </script>
+  <script type="text/javascript">
+      $('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget)
+  var recipient = button.data('whatever')
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)
+})
+  </script>
+
+</body>
+</html>
